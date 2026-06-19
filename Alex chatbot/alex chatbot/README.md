@@ -1,4 +1,4 @@
-# NEXUS · Rule-Based Chatbot
+# ALEX · Rule-Based Chatbot
 ### Task 1 — Chatbot with Rule-Based Responses
 
 ---
@@ -6,7 +6,7 @@
 ## 📁 Project Structure
 
 ```
-nexus-bot/
+ALEX-bot/
 ├── index.html          ← Main HTML shell
 ├── css/
 │   └── style.css       ← Dark terminal aesthetic UI
@@ -113,7 +113,7 @@ Render in UI
 
 ## 🎨 Design Philosophy
 
-NEXUS uses a **dark terminal aesthetic** with:
+ALEX uses a **dark terminal aesthetic** with:
 - `Space Mono` (monospace) for system labels and code-like elements
 - `Syne` (display) for headings and UI text
 - Cyan (`#00e5ff`) as the primary accent — the "active signal" color
@@ -153,7 +153,7 @@ For a **dynamic response** (uses live data):
 
 ## 📚 Learning Outcomes
 
-Building NEXUS demonstrates:
+Building ALEX demonstrates:
 
 1. **NLP Fundamentals** — Tokenization, pattern matching, input normalization
 2. **Conversation Flow** — Turn-based dialogue, fallback handling
