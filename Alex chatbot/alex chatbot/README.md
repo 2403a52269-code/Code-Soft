@@ -163,4 +163,7 @@ Building NEXUS demonstrates:
 
 ---
 
-*Built with ❤️ as part of Task 1 — Chatbot with Rule-Based Responses*
+AUTHOR
+-----------------------------------------------------------------------------------------------------
+PRANITH REDDY
+B-Tech (CSE-AIML)
