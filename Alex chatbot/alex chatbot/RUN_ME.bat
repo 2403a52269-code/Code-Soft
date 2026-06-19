@@ -1,0 +1,3 @@
+@echo off
+echo Starting NEXUS Chatbot...
+start "" "%~dp0index.html"

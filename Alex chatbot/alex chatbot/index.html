@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex · Chat</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <div class="app-shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <span class="pulse-ring"></span>
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="8" fill="var(--accent)"/>
+            <circle cx="18" cy="18" r="14" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <circle cx="18" cy="4" r="2.5" fill="var(--accent2)"/>
+            <circle cx="32" cy="26" r="2.5" fill="var(--accent2)"/>
+            <circle cx="4" cy="26" r="2.5" fill="var(--accent2)"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Alex</div>
+          <div class="brand-sub">Always here to chat</div>
+        </div>
+      </div>
+
+      <nav class="topic-nav">
+        <div class="nav-label">QUICK STARTERS</div>
+        <button class="topic-btn" data-msg="Hey! How are you?">👋 Say hi</button>
+        <button class="topic-btn" data-msg="Tell me a joke">😄 Tell me a joke</button>
+        <button class="topic-btn" data-msg="Tell me something interesting">🧠 Random fact</button>
+        <button class="topic-btn" data-msg="What time is it?">🕐 What time is it?</button>
+        <button class="topic-btn" data-msg="I need some motivation">💡 Motivate me</button>
+        <button class="topic-btn" data-msg="Tell me about Python">💻 Python</button>
+        <button class="topic-btn" data-msg="What do you like?">❤️ Your favourites</button>
+        <button class="topic-btn" data-msg="I'm bored, entertain me">😴 I'm bored</button>
+        <button class="topic-btn" data-msg="Bye! Talk later">👋 Say bye</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="stat-row">
+          <span>Messages</span>
+          <span id="msg-count" class="stat-val">0</span>
+        </div>
+        <div class="stat-row">
+          <span>Status</span>
+          <span class="stat-val online">● Online</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Chat Area -->
+    <main class="chat-area">
+      <header class="chat-header">
+        <div class="header-left">
+          <div class="avatar-sm">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="var(--accent)"/><circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 2"/></svg>
+          </div>
+          <div>
+            <div class="header-title">Alex</div>
+            <div class="header-status"><span class="dot"></span> Online</div>
+          </div>
+        </div>
+        <button class="clear-btn" id="clearBtn" title="Clear chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+          Clear
+        </button>
+      </header>
+
+      <div class="messages-wrap" id="messagesWrap">
+        <div class="messages" id="messages">
+          <div class="msg bot">
+            <div class="msg-avatar">A</div>
+            <div class="msg-body">
+              <div class="msg-bubble">
+                <p>Hey! 👋 I'm Alex. Good to meet you.</p>
+                <p>Feel free to chat about anything — jokes, facts, tech, life, whatever's on your mind. I'm all ears!</p>
+              </div>
+              <div class="msg-time">Just now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing indicator -->
+      <div class="typing-wrap" id="typingWrap" style="display:none;">
+        <div class="typing-indicator">
+          <span></span><span></span><span></span>
+          <em>Alex is typing…</em>
+        </div>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="input-bar">
+        <div class="input-wrap">
+          <textarea
+            id="userInput"
+            placeholder="Type a message…"
+            rows="1"
+            autocomplete="off"
+            spellcheck="false"
+          ></textarea>
+          <div class="input-actions">
+            <span class="char-count" id="charCount">0</span>
+            <button class="send-btn" id="sendBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-hint">Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line</div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="js/rules.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
